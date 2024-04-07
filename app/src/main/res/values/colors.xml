@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--App Colors-->
+    <color name="maroon_primary">#790000</color>
+    <color name="maroon_secondary">#7F0808</color>
+    <color name="maroon_btn">#7F0808</color>
+    <color name="yellow">#EE8000</color>
+    <color name="bg_primary">#FFFFFFFF</color>
+    <color name="bg_secondary">#EDEDED</color>
+    <color name="text_color">#202020</color>
+
+</resources>

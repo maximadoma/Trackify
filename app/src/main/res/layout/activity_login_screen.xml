@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/maroon_secondary"
+    tools:context=".login_screen">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="300dp"
+      android:orientation="vertical"
+      android:gravity="center"
+      android:padding="40dp"
+      android:background="@drawable/um_digos"
+      >
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/trackify_icon_logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_msg"
+        android:textColor="@color/yellow"
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/manrope_bold"
+        />
+
+  </LinearLayout>
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      app:cardCornerRadius="20dp"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="-20dp"
+      app:cardBackgroundColor="@color/white"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Login"
+          android:fontFamily="@font/manrope_bold"
+          android:textSize="20sp"
+          android:layout_marginBottom="40dp"
+          android:textColor="@color/black"
+          />
+
+      <EditText
+          android:id="@+id/username_field"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="text"
+          android:drawableStart="@drawable/user"
+          android:drawablePadding="8dp"
+          android:textSize="16sp"
+          android:hint="@string/username"
+          android:textColorHint="#302F2F"
+          android:textColor="@color/black"
+          android:padding="10dp"
+          android:layout_marginBottom="26dp"
+          android:background="@drawable/corner_radius_textbox"/>
+
+      <EditText
+          android:id="@+id/password_field"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="26dp"
+          android:background="@drawable/corner_radius_textbox"
+          android:drawableStart="@drawable/padlock"
+          android:drawablePadding="8dp"
+          android:hint="@string/password"
+          android:inputType="textPassword"
+          android:padding="10dp"
+          android:textColor="@color/black"
+          android:textColorHint="#302F2F"
+          android:textSize="16sp" />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/remember_password"
+          android:textColor="@color/black"
+          android:theme="@style/color_cb"
+          android:layout_marginBottom="60dp"/>
+
+
+      <Button
+          android:id="@+id/login_Btn"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:backgroundTint="@color/maroon_btn"
+          android:padding="10dp"
+          app:icon="@drawable/login"
+          app:iconGravity="textStart"
+          android:textColor="@color/white"
+          app:iconTint="@color/white"
+          android:layout_marginBottom="190dp"
+          android:text="@string/login"/>
+
+
+    </LinearLayout>
+
+  </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+

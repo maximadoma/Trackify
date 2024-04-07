@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TrackifyStudentViolationTracker" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+
+    </style>
+
+    <style name="Theme.TrackifyStudentViolationTracker" parent="Base.Theme.TrackifyStudentViolationTracker">
+        <item name="colorPrimaryDark">@color/maroon_primary</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:colorAccent">@color/maroon_btn</item>
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+    </style>
+
+    <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">#292929</item>
+    </style>
+
+
+    <style name="NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.TrackifyStudentViolationTracker.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.TrackifyStudentViolationTracker.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.TrackifyStudentViolationTracker.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
