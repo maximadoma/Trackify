@@ -14,6 +14,10 @@
         <item name="drawerArrowStyle">@style/DrawerIcon</item>
     </style>
 
+    <style name="CustomAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#FFFFFF</item> <!-- Set the background color to white -->
+    </style>
+
     <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="color">#292929</item>
     </style>

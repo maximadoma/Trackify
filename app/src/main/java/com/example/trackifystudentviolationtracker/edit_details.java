@@ -3,6 +3,8 @@ package com.example.trackifystudentviolationtracker;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatSpinner;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -69,7 +71,23 @@ public class edit_details extends AppCompatActivity {
 
                 if (selectedViolation.equals(violations.get(0)))
                 {
-                    Toast.makeText(getApplicationContext(), "Please select a violation", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(), "Please select a violation", Toast.LENGTH_SHORT).show();
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(edit_details.this, R.style.CustomAlertDialogTheme);
+                    builder.setTitle("")
+                            .setMessage("Please select a violation")
+                            .setCancelable(false)
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+//                                    Toast.makeText(edit_details.this,"Selected Option: YES",Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+                    //Creating dialog box
+                    AlertDialog dialog  = builder.create();
+                    dialog.show();
+
                 }else{
                     //Do your thing here....
                 }
