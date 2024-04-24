@@ -1,12 +1,19 @@
 package com.example.trackifystudentviolationtracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.journeyapps.barcodescanner.ScanContract;
+import com.journeyapps.barcodescanner.ScanOptions;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +66,44 @@ public class home_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_fragment, container, false);
+       View view = inflater.inflate(R.layout.fragment_home_fragment, container, false);
+
+       Button btn_scanner = (Button) view.findViewById(R.id.scan_Btn);
+        btn_scanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                codeScan();
+            }
+        });
+       return view;
     }
+
+    private void codeScan(){
+        ScanOptions options = new ScanOptions();
+        options.setCameraId(0);
+        options.setPrompt(null);
+        options.setCaptureActivity(camera_scanner.class);
+        options.setOrientationLocked(true);
+        options.setBarcodeImageEnabled(true);
+//        options.setTorchEnabled(true);
+        options.setBeepEnabled(false);
+        barLauncher.launch(options);
+
+
+
+        options.setDesiredBarcodeFormats(ScanOptions.ALL_CODE_TYPES);
+    }
+
+
+    ActivityResultLauncher<ScanOptions> barLauncher = registerForActivityResult(new ScanContract(), result ->{
+        if (result.getContents() != null){
+
+            //to show the result to another window
+            Intent Resultintent = new Intent (getActivity(), edit_details.class);
+            Resultintent.putExtra("",result.getContents());
+            startActivity(Resultintent);
+
+        }
+    });
+
 }

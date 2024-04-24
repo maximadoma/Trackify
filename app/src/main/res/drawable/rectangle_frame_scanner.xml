@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="200dp" android:height="200dp" android:viewportHeight="230" android:viewportWidth="230">
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M 211 5 C 211 5 214 5 225 5 L 225 17 L 225 5"
+        android:strokeColor="@color/white" android:strokeWidth="5"
+        tools:ignore="VectorRaster" />
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M 5 19 C 5 5 5 5 5 5 L 19 5 L 5 5"
+        android:strokeColor="@color/white" android:strokeWidth="5"
+        tools:ignore="VectorRaster" />
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M 211 225 C 225 225 225 225 225 225 L 225 211 L 225 225"
+        android:strokeColor="@color/white" android:strokeWidth="5"
+        tools:ignore="VectorRaster" />
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M 5 211 C 5 225 5 225 5 225 L 19 225 L 5 225"
+        android:strokeColor="@color/white" android:strokeWidth="5"
+        tools:ignore="VectorRaster" />
+</vector>

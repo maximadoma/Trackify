@@ -36,6 +36,11 @@ android {
 }
 
 dependencies {
+
+
+    implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
+    implementation ("com.google.zxing:core:3.3.0")
+
     implementation ("androidx.appcompat:appcompat:1.6.1")
     implementation ("com.airbnb.android:lottie:6.3.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

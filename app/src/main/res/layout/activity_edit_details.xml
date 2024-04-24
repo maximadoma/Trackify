@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".edit_details">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:id="@+id/toolbar_history"
+            android:background="@color/white">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:background="@color/white"
+                android:paddingEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/student_details"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/manrope_bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/shadow_toolbar"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/student_id_number"
+                        android:textColor="@color/black"
+                        android:paddingBottom="10dp"
+                        android:alpha="0.7">
+
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/scan_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        tools:ignore="LabelFor"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:background="@drawable/rounded_textbox"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textColor="@color/black"
+                        android:alpha="0.7"
+                        android:paddingBottom="10dp">
+
+                    </TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        tools:ignore="LabelFor"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:background="@drawable/rounded_textbox"/>
+
+
+                </LinearLayout>
+
+
+                <!--Gender and Year Level-->
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+
+                   <LinearLayout
+                       android:layout_width="160dp"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:padding="10dp">
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="@string/gender"
+                           android:textColor="@color/black"
+                           android:alpha="0.7"
+                           android:paddingBottom="10dp">
+
+                       </TextView>
+
+                       <EditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:importantForAutofill="no"
+                           android:inputType="text"
+                           tools:ignore="LabelFor"
+                           android:textColor="@color/black"
+                           android:padding="10dp"
+                           android:background="@drawable/rounded_textbox"/>
+
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:padding="10dp">
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="@string/year_level"
+                           android:textColor="@color/black"
+                           android:alpha="0.7"
+                           android:paddingBottom="10dp">
+
+                       </TextView>
+
+                       <EditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:importantForAutofill="no"
+                           android:inputType="text"
+                           tools:ignore="LabelFor"
+                           android:textColor="@color/black"
+                           android:padding="10dp"
+                           android:background="@drawable/rounded_textbox"/>
+
+
+                   </LinearLayout>
+
+               </LinearLayout>
+
+                <!--Gender and Year Level-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/course_program"
+                        android:textColor="@color/black"
+                        android:alpha="0.7"
+                        android:paddingBottom="10dp">
+
+                    </TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        tools:ignore="LabelFor"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:background="@drawable/rounded_textbox"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="College"
+                        android:textColor="@color/black"
+                        android:alpha="0.7"
+                        android:paddingBottom="10dp">
+
+                    </TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        tools:ignore="LabelFor"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:background="@drawable/rounded_textbox"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Violation"
+                        android:textColor="@color/black"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="10dp">
+
+                    </TextView>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_textbox" >
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/violation_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:hint="Select a violation"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            android:padding="10dp"/>
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/preview_Btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/maroon_btn"
+                        android:padding="10dp"
+                        android:text="Preview"
+                        android:textColor="@color/white"
+                        app:icon="@drawable/id_card"
+                        app:iconGravity="textStart"
+                        app:iconTint="@color/white"
+                        android:layout_marginBottom="60dp"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </LinearLayout>
+
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

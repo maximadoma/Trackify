@@ -32,4 +32,13 @@
     <string name="input_id_number">INPUT ID NUMBER</string>
     <string name="login">LOGIN</string>
     <string name="search">Search</string>
+    <string name="scan_the_barcode">Scan the Barcode</string>
+    <string name="camer_prompt">Line up the barcode inside the white corners and keep your phone steady.</string>
+    <string name="scanning">Scanning</string>
+    <string name="student_details">Student Details</string>
+    <string name="student_id_number">Student ID Number</string>
+    <string name="gender">Gender</string>
+    <string name="year_level">Year Level</string>
+    <string name="course_program">Course/Program</string>
+
 </resources>
