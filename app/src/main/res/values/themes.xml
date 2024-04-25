@@ -16,11 +16,13 @@
 
     <style name="CustomAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:background">#FFFFFF</item> <!-- Set the background color to white -->
+        <item name="android:textColorPrimary">#000000</item>
     </style>
 
     <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="color">#292929</item>
     </style>
+
 
 
     <style name="NoActionBar">

@@ -1,6 +1,8 @@
 package com.example.trackifystudentviolationtracker;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -10,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.journeyapps.barcodescanner.ScanContract;
@@ -68,13 +73,31 @@ public class home_fragment extends Fragment {
         // Inflate the layout for this fragment
        View view = inflater.inflate(R.layout.fragment_home_fragment, container, false);
 
+       //Initializing Buttons
        Button btn_scanner = (Button) view.findViewById(R.id.scan_Btn);
+       Button btn_manInput = (Button) view.findViewById(R.id.inputID_Btn);
+
+
+       //Camera Scanner Intent
         btn_scanner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 codeScan();
             }
         });
+
+        //Manual Input Intent
+
+        btn_manInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    codeInput();
+            }
+        });
+
+
+
+
        return view;
     }
 
@@ -89,11 +112,8 @@ public class home_fragment extends Fragment {
         options.setBeepEnabled(false);
         barLauncher.launch(options);
 
-
-
         options.setDesiredBarcodeFormats(ScanOptions.ALL_CODE_TYPES);
     }
-
 
     ActivityResultLauncher<ScanOptions> barLauncher = registerForActivityResult(new ScanContract(), result ->{
         if (result.getContents() != null){
@@ -106,4 +126,33 @@ public class home_fragment extends Fragment {
         }
     });
 
+
+
+    private void codeInput(){
+        // Create an alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(),  androidx.appcompat.R.style.Base_Theme_AppCompat_Light_Dialog_Alert);
+        builder.setTitle("Enter Student ID number");
+
+        // set the custom layout
+        final View customLayout = getLayoutInflater().inflate(R.layout.input_custom_layout, null);
+        builder.setView(customLayout);
+
+        // add a button
+        builder.setPositiveButton("SUBMIT", (dialog, which) -> {
+            // send data from the AlertDialog to the Activity
+            EditText editText = customLayout.findViewById(R.id.input_id);
+            sendDialogDataToActivity(editText.getText().toString());
+        });
+        // create and show the alert dialog
+        AlertDialog dialog = builder.create();
+
+
+        dialog.show();
+    }
+
+    // Do something with the data coming from the AlertDialog
+    private void sendDialogDataToActivity(String data) {
+        Toast.makeText(getActivity(), data, Toast.LENGTH_SHORT).show();
+    }
 }
+

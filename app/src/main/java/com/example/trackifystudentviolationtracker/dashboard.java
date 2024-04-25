@@ -29,6 +29,7 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
         setContentView(R.layout.activity_dashboard);
 
 
+
         //Initializing the Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -51,6 +52,8 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new home_fragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
+
+
 
 
     }
