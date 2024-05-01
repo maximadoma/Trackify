@@ -48,7 +48,7 @@ public class edit_details extends AppCompatActivity {
         });
 
 
-        final List<String> violations = Arrays.asList("Select a violation","Not wearing uniform", "Not wearing ID", "Loitering","Vandalism");
+        final List<String> violations = Arrays.asList("Select a violation*","Not wearing uniform", "Not wearing ID", "Loitering","Vandalism");
 
 
         AppCompatSpinner spinner = findViewById(R.id.violation_spinner);

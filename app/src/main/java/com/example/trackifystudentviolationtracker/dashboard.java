@@ -43,7 +43,6 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
         toggle.syncState();
 
 
-
         //Initializing the Side Drawer Navigation View
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -52,9 +51,6 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new home_fragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
-
-
-
 
     }
 

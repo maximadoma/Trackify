@@ -1,6 +1,7 @@
 package com.example.trackifystudentviolationtracker;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -115,10 +116,10 @@ public class home_fragment extends Fragment {
         options.setDesiredBarcodeFormats(ScanOptions.ALL_CODE_TYPES);
     }
 
+    //To show the result to edit_details.class
     ActivityResultLauncher<ScanOptions> barLauncher = registerForActivityResult(new ScanContract(), result ->{
-        if (result.getContents() != null){
 
-            //to show the result to another window
+        if (result.getContents() != null){
             Intent Resultintent = new Intent (getActivity(), edit_details.class);
             Resultintent.putExtra("",result.getContents());
             startActivity(Resultintent);
@@ -130,8 +131,8 @@ public class home_fragment extends Fragment {
 
     private void codeInput(){
         // Create an alert builder
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(),  androidx.appcompat.R.style.Base_Theme_AppCompat_Light_Dialog_Alert);
-        builder.setTitle("Enter Student ID number");
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), androidx.appcompat.R.style.Base_Theme_AppCompat_Light_Dialog_Alert);
+        builder.setTitle("Enter student ID number");
 
         // set the custom layout
         final View customLayout = getLayoutInflater().inflate(R.layout.input_custom_layout, null);
@@ -139,20 +140,45 @@ public class home_fragment extends Fragment {
 
         // add a button
         builder.setPositiveButton("SUBMIT", (dialog, which) -> {
+
             // send data from the AlertDialog to the Activity
             EditText editText = customLayout.findViewById(R.id.input_id);
             sendDialogDataToActivity(editText.getText().toString());
         });
         // create and show the alert dialog
         AlertDialog dialog = builder.create();
-
-
         dialog.show();
     }
 
-    // Do something with the data coming from the AlertDialog
+
+
+    // To show the result in edit_details.class
     private void sendDialogDataToActivity(String data) {
-        Toast.makeText(getActivity(), data, Toast.LENGTH_SHORT).show();
+
+        //To check when the input field is empty before proceeding
+        if (data.isEmpty()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.CustomAlertDialogTheme);
+            builder.setTitle("")
+                    .setMessage("Please enter student ID number")
+                    .setCancelable(false)
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    });
+
+            //Creating dialog box
+            AlertDialog dialog = builder.create();
+            dialog.show();
+
+        } else{
+            //To show the result to edit_details.class
+            Intent Resultintent = new Intent (getActivity(), edit_details.class);
+            Resultintent.putExtra("",data.toString());
+            startActivity(Resultintent);
+        }
+
+
     }
 }
 
