@@ -72,8 +72,6 @@ public class login_screen extends AppCompatActivity {
 
                             if(response.equalsIgnoreCase("logged in successfully")){
 
-//                                username_txt.setText("");
-//                                password_txt.setText("");
                                 Intent intent = new Intent(getApplicationContext(), dashboard.class);
                                 startActivity(intent);
 
@@ -82,10 +80,8 @@ public class login_screen extends AppCompatActivity {
                             }
                             else{
                                 Toast.makeText(login_screen.this, response, Toast.LENGTH_SHORT).show();
+                                loading_prompt.dismiss();
                             }
-
-
-
 
                         }
                     }, new Response.ErrorListener() {
@@ -93,6 +89,7 @@ public class login_screen extends AppCompatActivity {
                         public void onErrorResponse(VolleyError error) {
                             Toast.makeText(login_screen.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
                             System.out.println(error.getMessage().toString());
+                            loading_prompt.dismiss();
                         }
                     }) {
                         protected Map<String, String> getParams() {
@@ -102,9 +99,8 @@ public class login_screen extends AppCompatActivity {
                             return params;
                         }
                     };
+
                     queue.add(stringRequest);
-
-
 
                 }
             }
