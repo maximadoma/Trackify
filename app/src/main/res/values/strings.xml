@@ -40,5 +40,6 @@
     <string name="gender">Gender</string>
     <string name="year_level">Year Level</string>
     <string name="course_program">Course/Program</string>
+    <string name="note">Note: Before claiming your ID/Form 1, please visit the Office of Student Affairs for necessary transactions and obtain a claim stub along with this receipt. Thank you.</string>
 
 </resources>

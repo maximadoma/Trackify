@@ -89,7 +89,8 @@ public class edit_details extends AppCompatActivity {
                     dialog.show();
 
                 }else{
-                    //Do your thing here....
+                   Intent intent = new Intent(getApplicationContext(), final_review.class);
+                   startActivity(intent);
                 }
 
             }
