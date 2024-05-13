@@ -109,7 +109,6 @@ public class home_fragment extends Fragment {
         options.setCaptureActivity(camera_scanner.class);
         options.setOrientationLocked(true);
         options.setBarcodeImageEnabled(true);
-//        options.setTorchEnabled(true);
         options.setBeepEnabled(false);
         barLauncher.launch(options);
 

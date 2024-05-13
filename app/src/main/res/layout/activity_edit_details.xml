@@ -106,12 +106,14 @@
 
                     </TextView>
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/student_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:importantForAutofill="no"
                         android:inputType="text"
                         tools:ignore="LabelFor"
+                        android:textSize="18sp"
                         android:textColor="@color/black"
                         android:padding="10dp"
                         android:background="@drawable/rounded_textbox"/>
@@ -144,11 +146,13 @@
 
                        </TextView>
 
-                       <EditText
+                       <TextView
+                           android:id="@+id/student_gender"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:importantForAutofill="no"
                            android:inputType="text"
+                           android:textSize="18sp"
                            tools:ignore="LabelFor"
                            android:textColor="@color/black"
                            android:padding="10dp"
@@ -173,11 +177,13 @@
 
                        </TextView>
 
-                       <EditText
+                       <TextView
+                           android:id="@+id/year_level"
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"
                            android:importantForAutofill="no"
                            android:inputType="text"
+                           android:textSize="18sp"
                            tools:ignore="LabelFor"
                            android:textColor="@color/black"
                            android:padding="10dp"
@@ -207,12 +213,14 @@
 
                     </TextView>
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/course"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:importantForAutofill="no"
                         android:inputType="text"
                         tools:ignore="LabelFor"
+                        android:textSize="18sp"
                         android:textColor="@color/black"
                         android:padding="10dp"
                         android:background="@drawable/rounded_textbox"/>
@@ -236,12 +244,14 @@
 
                     </TextView>
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/college"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:importantForAutofill="no"
                         android:inputType="text"
                         tools:ignore="LabelFor"
+                        android:textSize="18sp"
                         android:textColor="@color/black"
                         android:padding="10dp"
                         android:background="@drawable/rounded_textbox"/>
