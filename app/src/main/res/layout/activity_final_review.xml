@@ -95,7 +95,6 @@
                                 android:id="@+id/id_number_text"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="S59888"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/manrope_medium"/>
                         </LinearLayout>
@@ -121,7 +120,6 @@
                                 android:id="@+id/student_name_text"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Maningo, Fernyl Jean"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/manrope_medium"/>
                         </LinearLayout>
@@ -147,7 +145,6 @@
                                 android:id="@+id/violaion_text"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Not Wearing ID"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/manrope_bold"/>
                         </LinearLayout>
@@ -173,7 +170,31 @@
                                 android:id="@+id/time_text"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="11:23 PM"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/manrope_medium"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="20dp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Date:"
+                                android:layout_weight="1"
+                                android:textColor="#606060"
+                                android:fontFamily="@font/manrope_medium"/>
+
+
+                            <TextView
+                                android:id="@+id/date_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/manrope_medium"/>
                         </LinearLayout>
@@ -199,7 +220,6 @@
                                 android:id="@+id/processed_by_text"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Juan dela Cruz"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/manrope_medium"/>
                         </LinearLayout>

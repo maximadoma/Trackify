@@ -72,6 +72,11 @@ public class login_screen extends AppCompatActivity {
 
                             if(response.equalsIgnoreCase("logged in successfully")){
 
+                                // Save username to SharedPreferences
+                                SharedPreferences.Editor editor = getSharedPreferences("user", MODE_PRIVATE).edit();
+                                editor.putString("username", username);
+                                editor.apply();
+
                                 Intent intent = new Intent(getApplicationContext(), dashboard.class);
                                 startActivity(intent);
 
@@ -82,6 +87,7 @@ public class login_screen extends AppCompatActivity {
                                 Toast.makeText(login_screen.this, response, Toast.LENGTH_SHORT).show();
                                 loading_prompt.dismiss();
                             }
+
 
                         }
                     }, new Response.ErrorListener() {

@@ -36,6 +36,8 @@ import java.util.Map;
 
 public class edit_details extends AppCompatActivity {
     EditText scan_output;
+
+    String student_name,student_gender, student_yr_level,student_course,student_college;
     private loading_prompt loading_prompt;
     TextView stud_studentname,stud_gender, stud_yearlevel,stud_course,stud_college;
     @Override
@@ -60,16 +62,11 @@ public class edit_details extends AppCompatActivity {
         scan_output = findViewById(R.id.scan_output);
 
 
-        if (scan_output != null) {
-          scan_output.setText(result_code);
-        }
+
+        //--------------------start retrieve to database---------------------------
 
 
-
-        //start retrieve to database---------------------------
-
-
-        String stud_id = scan_output.getText().toString().trim();
+        String stud_id = result_code.trim();
         loading_prompt.show();
 
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
@@ -86,25 +83,48 @@ public class edit_details extends AppCompatActivity {
                     for(int i= 0; i<jsonArray.length(); i++){
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-                        String student_name = jsonObject.getString("stud_lastname");
-                        String student_gender= jsonObject.getString("stud_gender");
-                        String student_yr_level = jsonObject.getString("year_level");
-                        String student_course = jsonObject.getString("course");
-                        String student_college = jsonObject.getString("college");
+                        student_name = jsonObject.getString("full_name");
+                        student_gender= jsonObject.getString("stud_gender");
+                        student_yr_level = jsonObject.getString("year_level");
+                        student_course = jsonObject.getString("course");
+                        student_college = jsonObject.getString("college");
 
 
-                        stud_studentname.setText(student_name);
-                        stud_gender.setText(student_gender);
-                        stud_yearlevel.setText(student_yr_level);
-                        stud_course.setText(student_course);
-                        stud_college.setText(student_college);
+                        if (scan_output != null) {
+                            scan_output.setText(stud_id);
+                            stud_studentname.setText(student_name);
+                            stud_gender.setText(student_gender);
+                            stud_yearlevel.setText(student_yr_level);
+                            stud_course.setText(student_course);
+                            stud_college.setText(student_college);
+                        }
+
 
                         loading_prompt.dismiss();
                     }
                 }catch(JSONException e){
                     e.printStackTrace();
-                    Toast.makeText(edit_details.this, "Data Not Available", Toast.LENGTH_SHORT).show();
-                    System.out.print(response);
+                    loading_prompt.dismiss();
+
+                    //do something to get back to dashboard and try input the ID number again
+                    //Validates whether the ID number exists in the database
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(edit_details.this, R.style.CustomAlertDialogTheme);
+                    builder.setTitle("Student ID not found")
+                            .setMessage("Please return to the dashboard and try again.")
+                            .setCancelable(false)
+                            .setPositiveButton("GO BACK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent intent = new Intent(getApplicationContext(), dashboard.class);
+                                    startActivity(intent);
+                                }
+                            });
+
+                    //Creating dialog box
+                    AlertDialog dialog  = builder.create();
+                    dialog.show();
+
                 }
 
             }
@@ -122,10 +142,7 @@ public class edit_details extends AppCompatActivity {
         };
         queue.add(stringRequest);
 
-
-
-
-        //end--------------
+        //------------end--------------
 
 
 
@@ -162,7 +179,6 @@ public class edit_details extends AppCompatActivity {
 
                 if (selectedViolation.equals(violations.get(0)))
                 {
-//                    Toast.makeText(getApplicationContext(), "Please select a violation", Toast.LENGTH_SHORT).show();
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(edit_details.this, R.style.CustomAlertDialogTheme);
                     builder.setTitle("")
@@ -181,12 +197,22 @@ public class edit_details extends AppCompatActivity {
 
                 }else{
 
+                    //I want the details from edit page to bring into the final page
 
-                    //start
 
-                    //end
-                   Intent intent = new Intent(getApplicationContext(), final_review.class);
-                   startActivity(intent);
+//                   Intent intent = new Intent(getApplicationContext(), final_review.class);
+//                   startActivity(intent);
+
+                    Intent resultIntent = new Intent(getApplicationContext(), final_review.class);
+                    resultIntent.putExtra("studentID", stud_id);
+                    resultIntent.putExtra("studentName", student_name);
+                    resultIntent.putExtra("violation", selectedViolation);
+
+                    startActivity(resultIntent);
+
+
+
+
                 }
 
             }
