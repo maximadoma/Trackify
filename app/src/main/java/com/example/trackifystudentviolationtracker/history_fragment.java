@@ -1,5 +1,7 @@
 package com.example.trackifystudentviolationtracker;
 
+import static com.example.trackifystudentviolationtracker.R.id.history_dataList;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +62,16 @@ public class history_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_history_fragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_history_fragment, container, false);
+
+
+         ListView  history_list = (ListView) view.findViewById(history_dataList);
+//        customAdapter base = new customAdapter(countryList, flags, this);
+//        data_list.setAdapter(base);
+
+
+
+        return view;
+
     }
 }

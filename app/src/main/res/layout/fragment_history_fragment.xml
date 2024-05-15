@@ -5,10 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".history_fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
+    <ListView
+        android:id="@+id/history_dataList"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:footerDividersEnabled="false"
+        />
 
 </FrameLayout>

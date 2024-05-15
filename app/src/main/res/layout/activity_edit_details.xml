@@ -237,7 +237,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="College"
+                        android:text="Department"
                         android:textColor="@color/black"
                         android:alpha="0.7"
                         android:paddingBottom="10dp">

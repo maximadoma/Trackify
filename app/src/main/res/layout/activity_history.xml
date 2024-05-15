@@ -24,6 +24,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/back"
                 android:background="@color/white"
+
                 android:paddingEnd="10dp"/>
 
             <TextView

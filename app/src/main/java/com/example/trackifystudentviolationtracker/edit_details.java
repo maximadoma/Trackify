@@ -87,7 +87,7 @@ public class edit_details extends AppCompatActivity {
                         student_gender= jsonObject.getString("stud_gender");
                         student_yr_level = jsonObject.getString("year_level");
                         student_course = jsonObject.getString("course");
-                        student_college = jsonObject.getString("college");
+                        student_college = jsonObject.getString("department");
 
 
                         if (scan_output != null) {
