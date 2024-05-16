@@ -5,11 +5,15 @@
     android:layout_height="match_parent"
     tools:context=".history_fragment">
 
+
+
     <ListView
         android:id="@+id/history_dataList"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:footerDividersEnabled="false"
         />
+
+
 
 </FrameLayout>

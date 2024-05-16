@@ -3,6 +3,9 @@ package com.example.trackifystudentviolationtracker;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,7 +37,15 @@ public class history extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Display history fragment
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frame_layout, new history_fragment())
+                .commit();
+
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

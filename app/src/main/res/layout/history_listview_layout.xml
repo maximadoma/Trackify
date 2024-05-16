@@ -1,4 +1,4 @@
-<!-- res/layout/list_item.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,8 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#FFFFFF"
-        app:cardElevation="8dp"
-        app:cardCornerRadius="10dp">
+        app:cardElevation="2dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="6dp">
 
 
         <LinearLayout
@@ -32,9 +33,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="S59888"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/manrope_bold"
-                    android:textSize="14sp"/>
+                    android:textSize="15sp"/>
 
                 <TextView
                     android:id="@+id/date_and_time"
