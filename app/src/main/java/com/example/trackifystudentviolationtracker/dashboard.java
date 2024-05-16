@@ -2,6 +2,7 @@ package com.example.trackifystudentviolationtracker;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -88,6 +89,11 @@ public class dashboard extends AppCompatActivity implements NavigationView.OnNav
                     .setCancelable(false)
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
+
+                            SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.putString("remember", "false");
+                            editor.apply();
                             Intent intent = new Intent(getApplicationContext(), login_screen.class);
                             startActivity(intent);
                         }

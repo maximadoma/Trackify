@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -35,6 +37,7 @@ public class login_screen extends AppCompatActivity {
     private loading_prompt loading_prompt;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +45,7 @@ public class login_screen extends AppCompatActivity {
 
         EditText username_txt = findViewById(R.id.username_field);
         EditText password_txt = findViewById(R.id.password_field);
+        CheckBox checkBox = findViewById(R.id.login_checkbox);
         Button login_btn = findViewById(R.id.login_Btn);
 
         String url = "https://trackify-student-violation-tracker.000webhostapp.com/trackify_folder/login.php";
@@ -112,22 +116,39 @@ public class login_screen extends AppCompatActivity {
             }
         });
 
+        //checkbox validation so that the user keeps logged in until user is logged out
 
 
-//
-//        login_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                goto_dashboard();
-//            }
-//        });
-//
-//    }
-//
-//    public boolean goto_dashboard(){
-//        Intent intent = new Intent(getApplicationContext(), dashboard.class);
-//        startActivity(intent);
-//        return true;
+        SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+        String checkbox = preferences.getString("remember","");
+
+        if (checkbox.equals("true")){
+            Intent intent = new Intent(getApplicationContext(), dashboard.class);
+            startActivity(intent);
+        }else if (checkbox.equals("false")){
+            //the user still needs to sign in
+        }
+        
+
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(buttonView.isChecked()){
+                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("remember", "true");
+                    editor.apply();
+                }else if (!buttonView.isChecked()){
+                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("remember", "false");
+                    editor.apply();
+                }
+            }
+        });
+
+
+
 
 
 
