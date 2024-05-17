@@ -308,7 +308,7 @@
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/maroon_btn"
                         android:padding="10dp"
-                        android:text="Preview"
+                        android:text="PREVIEW"
                         android:textColor="@color/white"
                         app:icon="@drawable/id_card"
                         app:iconGravity="textStart"

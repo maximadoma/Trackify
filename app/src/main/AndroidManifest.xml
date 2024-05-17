@@ -21,6 +21,9 @@
         android:theme="@style/Theme.TrackifyStudentViolationTracker"
         tools:targetApi="31">
         <activity
+            android:name=".violation_details"
+            android:exported="false" />
+        <activity
             android:name=".final_review"
             android:exported="false" />
         <activity

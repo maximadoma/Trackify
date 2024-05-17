@@ -230,7 +230,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/note"
                             android:textColor="#606060"
-                            android:textSize="10sp"
+                            android:textSize="11sp"
                             android:fontFamily="@font/manrope_medium"/>
 
                     </LinearLayout>
@@ -261,7 +261,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/yellow"
                 android:padding="10dp"
-                android:text="Submit Final"
+                android:text="@string/submit_final"
                 android:textColor="@color/white"
                 app:icon="@drawable/id_card"
                 app:iconGravity="textStart"

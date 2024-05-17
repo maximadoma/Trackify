@@ -3,6 +3,7 @@ package com.example.trackifystudentviolationtracker;
 import static com.example.trackifystudentviolationtracker.R.id.history_dataList;
 import static com.example.trackifystudentviolationtracker.customAdapter.*;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +12,7 @@ import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -92,14 +94,23 @@ public class history_fragment extends Fragment {
         loading_prompt = new loading_prompt(getContext());
 
 
-
         ListView  history_list = (ListView) view.findViewById(history_dataList);
         adapter = new customAdapter(idList, dateTimeList, violationTypeList, getContext());
         history_list.setAdapter(adapter);
-
-
+        history_list.setClickable(true);
         historyData();
 
+        //brings the data to the violation details to view all the student details
+        history_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), violation_details.class);
+                intent.putExtra("id", idList.get(position));
+                intent.putExtra("date_time", dateTimeList.get(position));
+                intent.putExtra("violation", violationTypeList.get(position));
+                startActivity(intent);
+            }
+        });
 
         return view;
 

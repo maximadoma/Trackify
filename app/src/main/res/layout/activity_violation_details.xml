@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".history">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:id="@+id/toolbar_history"
+            android:background="@color/white">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:background="@color/white"
+                android:paddingEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/manrope_bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/shadow_toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/receipt_bg"
+            app:cardCornerRadius="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/trackify_logo_with_slogan"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/student_violation_receipt"
+                    android:fontFamily="@font/manrope_bold"
+                    android:textAlignment="center"
+                    android:paddingTop="24dp"
+                    android:textColor="#393939"
+                    android:paddingBottom="24dp"
+                    android:textSize="16sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#CC1818"
+                    />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+
+                <!--Issued-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="20dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Issued at:"
+                        android:layout_weight="1"
+                        android:textColor="#606060"
+                        android:fontFamily="@font/manrope_medium"/>
+
+
+                    <TextView
+                        android:id="@+id/issue_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/manrope_medium"/>
+                </LinearLayout>
+
+                <!--ID number-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="20dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ID Number:"
+                        android:layout_weight="1"
+                        android:textColor="#606060"
+                        android:fontFamily="@font/manrope_medium"/>
+
+
+                    <TextView
+                        android:id="@+id/id_number_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/manrope_medium"/>
+                </LinearLayout>
+
+                <!--Student Name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="20dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name:"
+                        android:layout_weight="1"
+                        android:textColor="#606060"
+                        android:fontFamily="@font/manrope_medium"/>
+
+
+                    <TextView
+                        android:id="@+id/name_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/manrope_medium"/>
+                </LinearLayout>
+
+                <!--Gender-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="20dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender:"
+                        android:layout_weight="1"
+                        android:textColor="#606060"
+                        android:fontFamily="@font/manrope_medium"/>
+
+
+                    <TextView
+                        android:id="@+id/gender_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/manrope_medium"/>
+                </LinearLayout>
+
+                <!--Year Level-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="20dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Year Level:"
+                        android:layout_weight="1"
+                        android:textColor="#606060"
+                        android:fontFamily="@font/manrope_medium"/>
+
+
+                    <TextView
+                        android:id="@+id/yearlevel_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/manrope_medium"/>
+                </LinearLayout>
+
+                <!--Course/Program-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="20dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Course/Program:"
+                        android:layout_weight="1"
+                        android:textColor="#606060"
+                        android:fontFamily="@font/manrope_medium"/>
+
+
+                    <TextView
+                        android:id="@+id/course_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/manrope_medium"/>
+                </LinearLayout>
+
+                <!--Department-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="20dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Department:"
+                        android:layout_weight="1"
+                        android:textColor="#606060"
+                        android:fontFamily="@font/manrope_medium"/>
+
+
+                    <TextView
+                        android:id="@+id/department_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/manrope_medium"/>
+                </LinearLayout>
+
+                <!--Violation Type-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="20dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Violation:"
+                        android:layout_weight="1"
+                        android:textColor="#606060"
+                        android:fontFamily="@font/manrope_medium"/>
+
+
+                    <TextView
+                        android:id="@+id/vio_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/manrope_bold"/>
+                </LinearLayout>
+
+                <!--Processed By-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="20dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Processed by:"
+                        android:layout_weight="1"
+                        android:textColor="#606060"
+                        android:fontFamily="@font/manrope_medium"/>
+
+
+                    <TextView
+                        android:id="@+id/processed_by_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/manrope_medium"/>
+                </LinearLayout>
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notice"
+                    android:textSize="11sp"
+                    android:textColor="#606060"
+                    android:fontFamily="@font/manrope_medium"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

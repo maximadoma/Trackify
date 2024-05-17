@@ -4,7 +4,7 @@
     <string name="welcome_msg">Welcome</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="remember_password">Remember Password</string>
+    <string name="remember_password">Remember Me</string>
     <string name="logout">Logout</string>
     <string name="about_trackify">About Trackify</string>
     <string name="settings">Settings</string>
@@ -41,5 +41,9 @@
     <string name="year_level">Year Level</string>
     <string name="course_program">Course/Program</string>
     <string name="note">Note: Before claiming your ID/Form 1, please visit the Office of Student Affairs for necessary transactions and obtain a claim stub along with this receipt. Thank you.</string>
+    <string name="details">Details</string>
+    <string name="notice">*Present this receipt to the Office of Student Affairs for further transactions.</string>
+    <string name="student_violation_receipt">STUDENT VIOLATION RECEIPT</string>
+    <string name="submit_final">SUBMIT FINAL</string>
 
 </resources>
