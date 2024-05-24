@@ -68,7 +68,7 @@ public class violation_details extends AppCompatActivity {
         img_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), dashboard.class);
+                Intent intent = new Intent(getApplicationContext(), history.class);
                 startActivity(intent);
             }
         });

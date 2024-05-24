@@ -5,12 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 
 public class customAdapter extends BaseAdapter {
+    public Filter getFilter;
     private ArrayList<String> idList;
     private ArrayList<String> dateTimeList;
     private ArrayList<String> violationTypeList;
@@ -55,4 +57,50 @@ public class customAdapter extends BaseAdapter {
 
         return view;
     }
+
+
+
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                FilterResults results = new FilterResults();
+                ArrayList<String> filteredIds = new ArrayList<>();
+                ArrayList<String> filteredDates = new ArrayList<>();
+                ArrayList<String> filteredViolations = new ArrayList<>();
+
+                if (constraint == null || constraint.length() == 0) {
+                    // No filter, return the original data
+                    filteredIds.addAll(idList);
+                    filteredDates.addAll(dateTimeList);
+                    filteredViolations.addAll(violationTypeList);
+                } else {
+                    String filterPattern = constraint.toString().toLowerCase().trim();
+
+                    for (int i = 0; i < idList.size(); i++) {
+                        if (idList.get(i).toLowerCase().contains(filterPattern) ||
+                                dateTimeList.get(i).toLowerCase().contains(filterPattern) ||
+                                violationTypeList.get(i).toLowerCase().contains(filterPattern)) {
+                            filteredIds.add(idList.get(i));
+                            filteredDates.add(dateTimeList.get(i));
+                            filteredViolations.add(violationTypeList.get(i));
+                        }
+                    }
+                }
+
+                results.values = filteredIds;
+                results.count = filteredIds.size();
+                return results;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+                idList = (ArrayList<String>) results.values;
+                notifyDataSetChanged();
+            }
+        };
+    }
+
+
+
 }

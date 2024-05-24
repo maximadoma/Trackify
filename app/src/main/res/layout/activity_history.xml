@@ -16,7 +16,8 @@
             android:layout_height="56dp"
             android:id="@+id/toolbar_history"
             android:background="@color/white"
-            app:menu="@menu/custom_menu_toolbar">
+            app:menu="@menu/custom_menu_toolbar"
+            app:theme="@style/AppTheme.Toolbar">
 
             <ImageButton
                 android:id="@+id/back"
@@ -51,29 +52,12 @@
             android:layout_height="match_parent"
             android:background="#FFFFFF">
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:orientation="vertical"-->
-<!--                android:gravity="center">-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="200dp"-->
-<!--                    android:layout_height="200dp"-->
-<!--                    android:src="@drawable/empty_record"-->
-<!--                    android:alpha="0.9"-->
-<!--                    />-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="You don't have any records yet."-->
-<!--                    android:textAlignment="center"-->
-<!--                    android:textColor="#404040"-->
-<!--                    android:layout_margin="30dp"/>-->
-
-
-<!--            </LinearLayout>-->
+            <ListView
+                android:id="@+id/history_dataList"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:footerDividersEnabled="false"
+                />
 
         </FrameLayout>
 

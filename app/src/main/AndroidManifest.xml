@@ -27,9 +27,6 @@
             android:name=".final_review"
             android:exported="false" />
         <activity
-            android:name=".progress_bar"
-            android:exported="false" />
-        <activity
             android:name=".edit_details"
             android:exported="false" />
         <activity
