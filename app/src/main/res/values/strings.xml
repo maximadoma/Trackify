@@ -45,5 +45,33 @@
     <string name="notice">*Present this receipt to the Office of Student Affairs for further transactions.</string>
     <string name="student_violation_receipt">STUDENT VIOLATION RECEIPT</string>
     <string name="submit_final">SUBMIT FINAL</string>
+    <string name="about">Trackify is a secure and innovative mobile application designed to enhance the existing system for recording, tracking, and managing student violations within the academic institution.</string>
+    <string name="terms_and_condition">Terms and Conditions</string>
+    <string name="agree">By using Trackify, you agree to comply with these terms:</string>
+    <string name="usage">Authorized Personnel Only: Access to Trackify is restricted to authorized personnel who have been granted specific permissions to manage student violations. Unauthorized access or use of the app is strictly prohibited.</string>
+    <string name="usage_title">Usage</string>
+    <string name="data_security">Data Protection: We employ robust security measures, including encryption and regular security audits, to protect your data from unauthorized access and breaches.</string>
+    <string name="data_security_title">Data Security</string>
+    <string name="prohibition_title">Prohibited Activities</string>
+    <string name="prohibition">No Unauthorized Use: Users are prohibited from using Trackify for any unauthorized or illegal activities. This includes, but is not limited to, unauthorized access to student data, data manipulation, and any activities that violate institutional policies or legal regulations.</string>
+    <string name="modification">Service Changes: Trackify reserves the right to modify, suspend, or terminate the service, or any part of it, at any time without prior notice. Users will be notified of significant changes through official communication channels.</string>
+    <string name="data_policy">We prioritize your privacy. This policy covers:</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="data_collection">Data Collection</string>
+    <string name="personal_information">Personal Information: We collect personal information necessary for the provision of our services. This includes user identification, contact details, and information related to student violations.</string>
+    <string name="data_usage">Service Improvement: The information collected is used to manage student violations effectively and to continuously improve our services. This includes analyzing data to enhance app functionality and user experience.</string>
+    <string name="use_of_information">Use of Information</string>
+    <string name="data_security_info">Data Security</string>
+    <string name="data_encryption">Encryption: We utilize robust encryption protocols to ensure that your data is protected during transmission and storage. Regular security updates and audits are conducted to maintain the highest level of data security.</string>
+    <string name="thrid_party_info">No Unauthorized Sharing: We do not share your personal information with third parties without your explicit consent, except when required by law. Any data sharing for legal compliance will be done in accordance with applicable regulations.</string>
+    <string name="record">Access and Control: Users have the right to access, correct, or delete their personal information stored in Trackify. Requests for data access or modification can be made through the app’s support channels.</string>
+    <string name="developers">Developers</string>
+    <string name="developer_info">Trackify is developed by Cristian Jay Pesongco and Fernyl Jean Maningo, 2nd year BSIT students at UM Digos College.</string>
+    <string name="copyright_info">© 2024 Cristian Jay Pesongco and Fernyl Jean Maningo. All rights reserved. Unauthorized reproduction or distribution is prohibited.</string>
+    <string name="copyright">Copyright</string>
+    <string name="date_ascending">Current</string>
+    <string name="date_descending">Earliest</string>
+    <string name="sort_by">SORT DATE BY</string>
+
 
 </resources>

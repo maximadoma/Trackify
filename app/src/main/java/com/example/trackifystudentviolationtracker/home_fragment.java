@@ -1,8 +1,10 @@
 package com.example.trackifystudentviolationtracker;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -68,6 +70,9 @@ public class home_fragment extends Fragment {
         }
     }
 
+
+    private SharedPreferences sharedPreferences;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -79,27 +84,14 @@ public class home_fragment extends Fragment {
        Button btn_manInput = (Button) view.findViewById(R.id.inputID_Btn);
 
 
-       //Camera Scanner Intent
-        btn_scanner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                codeScan();
-            }
-        });
-
-        //Manual Input Intent
-
-        btn_manInput.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                    codeInput();
-            }
-        });
+        // Initialize SharedPreferences
+        sharedPreferences = getActivity().getSharedPreferences("ScanSettings", Context.MODE_PRIVATE);
 
 
+        btn_scanner.setOnClickListener(v -> codeScan());
+        btn_manInput.setOnClickListener(v -> codeInput());
 
-
-       return view;
+        return view;
     }
 
     private void codeScan(){
@@ -109,11 +101,19 @@ public class home_fragment extends Fragment {
         options.setCaptureActivity(camera_scanner.class);
         options.setOrientationLocked(true);
         options.setBarcodeImageEnabled(true);
-        options.setBeepEnabled(false);
-        barLauncher.launch(options);
+
+
+        // Retrieve settings from SharedPreferences
+        boolean beepEnabled = sharedPreferences.getBoolean("beep", false);
+        boolean vibrateEnabled = sharedPreferences.getBoolean("vibrate", false);
+        options.setBeepEnabled(beepEnabled);
+
 
         options.setDesiredBarcodeFormats(ScanOptions.ALL_CODE_TYPES);
+        barLauncher.launch(options);
     }
+
+
 
     //To show the result to edit_details.class
     ActivityResultLauncher<ScanOptions> barLauncher = registerForActivityResult(new ScanContract(), result ->{

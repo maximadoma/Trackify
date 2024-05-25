@@ -47,6 +47,300 @@
         <View android:layout_width="match_parent"
             android:layout_height="5dp"
             android:background="@drawable/shadow_toolbar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Introduction"
+                    android:fontFamily="@font/manrope_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about"
+                    android:textSize="12sp"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:textColor="@color/black"/>
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms_and_condition"
+                    android:fontFamily="@font/manrope_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agree"
+                    android:paddingTop="10dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:textColor="@color/black"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/usage_title"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/usage"
+                    android:paddingTop="6dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/data_security_title"
+                    android:paddingTop="20dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/data_security"
+                    android:paddingTop="6dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prohibition_title"
+                    android:paddingTop="20dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prohibition"
+                    android:paddingTop="6dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Modifications"
+                    android:paddingTop="20dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modification"
+                    android:paddingTop="6dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/black"/>
+
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/privacy_policy"
+                    android:fontFamily="@font/manrope_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/data_policy"
+                    android:paddingTop="10dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/data_collection"
+                    android:paddingTop="20dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal_information"
+                    android:paddingTop="6dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/use_of_information"
+                    android:paddingTop="20dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/data_usage"
+                    android:paddingTop="6dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/data_security_info"
+                    android:paddingTop="20dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/data_encryption"
+                    android:paddingTop="6dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Third-Party Sharing"
+                    android:paddingTop="20dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thrid_party_info"
+                    android:paddingTop="6dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="User Rights"
+                    android:paddingTop="20dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/record"
+                    android:paddingTop="6dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/black"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/developers"
+                    android:fontFamily="@font/manrope_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/developer_info"
+                    android:paddingTop="10dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:textColor="@color/black"/>
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/copyright"
+                    android:fontFamily="@font/manrope_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/copyright_info"
+                    android:paddingTop="10dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Version: 04.05.27.001"
+                    android:paddingTop="10dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:textColor="@color/black"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
     </FrameLayout>
 
 

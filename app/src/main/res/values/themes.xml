@@ -26,6 +26,12 @@
         <!--This line changes the color of icons in toolbar (back, overflow menu icons)-->
         <item name="android:textColorSecondary">#616161</item>
         <item name="android:textColorHint">#616161</item>
+        <item name="popupTheme">@style/CustomPopupTheme</item>
+    </style>
+
+    <style name="CustomPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <!-- Customize the background color of the popup menu -->
+        <item name="android:backgroundTint">@color/white</item>
     </style>
 
     <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">

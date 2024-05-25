@@ -10,10 +10,18 @@
         android:icon="@drawable/search"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         />
+
     <item
-        android:id="@+id/nav_settings"
-        android:title="Kebab"
-        app:showAsAction="ifRoom"
-        android:icon="@drawable/kebab_menu"/>
+        android:title="@string/sort_by"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/date_ascending"
+        android:title="@string/date_ascending"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/date_descending"
+        android:title="@string/date_descending"
+        app:showAsAction="never"/>
 
 </menu>
