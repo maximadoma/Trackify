@@ -89,21 +89,33 @@ public class history extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.custom_menu_toolbar, menu);
         MenuItem searchItem = menu.findItem(R.id.nav_search);
         searchView = (SearchView) searchItem.getActionView();
-        assert searchView != null;
         searchView.setQueryHint("Search");
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 // Perform search when user submits query
-                historySearch(query);
+
+                if (searchView.equals("")){
+                    currentDate();
+                }
+                else {
+                    historySearch(query);
+                }
+
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
                 // Perform search as user types
-                historySearch(newText);
+
+                if (searchView.equals("")){
+                    currentDate();
+                }
+                else {
+                    historySearch(newText);
+                }
                 return true;
             }
         });
@@ -144,12 +156,13 @@ public class history extends AppCompatActivity {
         String url = "https://trackify-student-violation-tracker.000webhostapp.com/trackify_folder/search_retrieve.php";
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, response -> {
-            try {
-                JSONArray jsonArray = new JSONArray(response);
 
+            try {
                 idList.clear();
                 dateTimeList.clear();
                 violationTypeList.clear();
+
+                JSONArray jsonArray = new JSONArray(response);
 
                 if (response.startsWith("<")) {
                     // Response is not JSON, handle the error
