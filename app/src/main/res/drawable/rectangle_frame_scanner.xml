@@ -1,23 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--<vector-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:width="200dp" android:height="200dp" android:viewportHeight="230" android:viewportWidth="230">-->
+<!--    <path android:fillColor="#00000000" android:fillType="evenOdd"-->
+<!--        android:pathData="M 211 5 C 217 5 214 5 225 5 L 225 17 L 225 5"-->
+<!--        android:strokeColor="@color/white" android:strokeWidth="5"-->
+<!--        tools:ignore="VectorRaster" />-->
+<!--    <path android:fillColor="#00000000" android:fillType="evenOdd"-->
+<!--        android:pathData="M 5 19 C 5 5 5 5 5 5 L 19 5 L 5 5"-->
+<!--        android:strokeColor="@color/white" android:strokeWidth="5"-->
+<!--        tools:ignore="VectorRaster" />-->
+<!--    <path android:fillColor="#00000000" android:fillType="evenOdd"-->
+<!--        android:pathData="M 211 225 C 225 225 225 225 225 225 L 225 211 L 225 225"-->
+<!--        android:strokeColor="@color/white" android:strokeWidth="5"-->
+<!--        tools:ignore="VectorRaster" />-->
+<!--    <path android:fillColor="#00000000" android:fillType="evenOdd"-->
+<!--        android:pathData="M 5 211 C 5 225 5 225 5 225 L 19 225 L 5 225"-->
+<!--        android:strokeColor="@color/white" android:strokeWidth="5"-->
+<!--        tools:ignore="VectorRaster" />-->
+<!--</vector>-->
+
+
 <vector
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:width="200dp" android:height="200dp" android:viewportHeight="230" android:viewportWidth="230">
-    <path android:fillColor="#00000000" android:fillType="evenOdd"
-        android:pathData="M 211 5 C 211 5 214 5 225 5 L 225 17 L 225 5"
-        android:strokeColor="@color/white" android:strokeWidth="5"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportHeight="235"
+    android:viewportWidth="235">
+
+    <!-- Top left corner -->
+    <path
+        android:fillColor="#00000000"
+        android:fillType="evenOdd"
+        android:pathData="M 10 60 L 10 25 A 15 15 0 0 1 25 10 L 60 10"
+        android:strokeColor="@color/white"
+        android:strokeWidth="5"
         tools:ignore="VectorRaster" />
-    <path android:fillColor="#00000000" android:fillType="evenOdd"
-        android:pathData="M 5 19 C 5 5 5 5 5 5 L 19 5 L 5 5"
-        android:strokeColor="@color/white" android:strokeWidth="5"
+
+    <!-- Top right corner -->
+    <path
+        android:fillColor="#00000000"
+        android:fillType="evenOdd"
+        android:pathData="M 170 10 L 210 10 A 15 15 0 0 1 225 25 L 225 60"
+        android:strokeColor="@color/white"
+        android:strokeWidth="5"
         tools:ignore="VectorRaster" />
-    <path android:fillColor="#00000000" android:fillType="evenOdd"
-        android:pathData="M 211 225 C 225 225 225 225 225 225 L 225 211 L 225 225"
-        android:strokeColor="@color/white" android:strokeWidth="5"
+
+    <!-- Bottom left corner -->
+    <path
+        android:fillColor="#00000000"
+        android:fillType="evenOdd"
+        android:pathData="M 10 170 L 10 210 A 15 15 0 0 0 25 225 L 60 225"
+        android:strokeColor="@color/white"
+        android:strokeWidth="5"
         tools:ignore="VectorRaster" />
-    <path android:fillColor="#00000000" android:fillType="evenOdd"
-        android:pathData="M 5 211 C 5 225 5 225 5 225 L 19 225 L 5 225"
-        android:strokeColor="@color/white" android:strokeWidth="5"
+
+    <!-- Bottom right corner -->
+    <path
+        android:fillColor="#00000000"
+        android:fillType="evenOdd"
+        android:pathData="M 170 225 L 210 225 A 15 15 0 0 0 225 210 L 225 170"
+        android:strokeColor="@color/white"
+        android:strokeWidth="5"
         tools:ignore="VectorRaster" />
 </vector>

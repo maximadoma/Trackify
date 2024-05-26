@@ -7,6 +7,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
+import android.widget.ImageView;
 
 import com.google.zxing.ResultPoint;
 import com.journeyapps.barcodescanner.BarcodeCallback;
@@ -20,9 +21,11 @@ import java.util.List;
 
 public class camera_scanner extends AppCompatActivity {
     private CaptureManager captureManager;
-    private boolean vibrate;
+    private boolean isFlashOn = false;
 
     private DecoratedBarcodeView barcodeView;
+
+    private ImageView flashButton;
 
 
     @Override
@@ -30,18 +33,21 @@ public class camera_scanner extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_scanner);
 
-        vibrate = getIntent().getBooleanExtra("vibrate", false);
-
-        DecoratedBarcodeView barcodeView = findViewById(R.id.barcode_View);
+        barcodeView = findViewById(R.id.barcode_View);
         captureManager = new CaptureManager(this, barcodeView);
         barcodeView.setStatusText(null);
         captureManager.initializeFromIntent(getIntent(), savedInstanceState);
         captureManager.decode();
 
 
-        ViewfinderView viewFinder = barcodeView.getViewFinder();
+        // Flash button
+        flashButton = findViewById(R.id.flash);
+        flashButton.setOnClickListener(v -> toggleFlash());
 
         //remove the laser
+
+        ViewfinderView viewFinder = barcodeView.getViewFinder();
+
         Field scannerAlphaField = null;
 
         try {
@@ -73,5 +79,25 @@ public class camera_scanner extends AppCompatActivity {
         super.onPause();
         captureManager.onPause();
     }
+
+    private void toggleFlash() {
+        if (isFlashOn) {
+            barcodeView.setTorchOff();
+            isFlashOn = false;
+        } else {
+            barcodeView.setTorchOn();
+            isFlashOn = true;
+        }
+        updateFlashIcon();
+    }
+
+    private void updateFlashIcon() {
+        if (isFlashOn) {
+            flashButton.setImageResource(R.drawable.flash);
+        } else {
+            flashButton.setImageResource(R.drawable.flash_off);
+        }
+    }
+
 
 }

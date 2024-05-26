@@ -117,9 +117,82 @@
             </LinearLayout>
 
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="App Theme"
+                android:fontFamily="@font/manrope_bold"
+                android:textSize="14sp"
+                android:textColor="@color/black"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Light"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:id="@+id/light_theme"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:theme="@style/color_cb" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dark"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:id="@+id/dark_theme"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:theme="@style/color_cb" />
+
+
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
+
+
+
+
 
     </FrameLayout>
 

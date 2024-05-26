@@ -102,6 +102,9 @@ public class home_fragment extends Fragment {
         options.setOrientationLocked(true);
         options.setBarcodeImageEnabled(true);
 
+        //this is my target
+        options.setTorchEnabled(false);
+
 
         // Retrieve settings from SharedPreferences
         boolean beepEnabled = sharedPreferences.getBoolean("beep", false);
